@@ -1,12 +1,10 @@
-import getFullResponseFromAPI from './1-promise';
-function getFullResponseFromAPI(success) {
+import getResponseFromAPI from "./0-promise.js";
+function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    if (success) {
-      resolve({ status: 200, body: 'Success' });
-    } else {
-      reject(new Error('The fake API is not working currently'));
-    }
+    // Aquí puedes realizar cualquier lógica o llamada a una API real
+    // En este caso, simplemente resolvemos la promesa sin ningún valor
+    resolve();
   });
 }
-console.log(getFullResponseFromAPI(true));
-console.log(getFullResponseFromAPI(false));
+const response = getResponseFromAPI();
+console.log(response instanceof Promise);
