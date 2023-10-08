@@ -1,1 +1,3 @@
-import { uploadPhoto, createUser } from "./utils";
+import handleProfileSignup from "./3-all";
+
+handleProfileSignup();
